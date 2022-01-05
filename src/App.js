@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import ButtonAppBar from './components/navbar/navbar';
 
 function App() {
   return (
     <div className="App">
-      <h1>titulo</h1>
-      <h2>hola</h2>
+      <ButtonAppBar/>
     </div>
   );
 }

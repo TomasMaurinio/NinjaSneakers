@@ -1,0 +1,17 @@
+header.css-hip9hq-MuiPaper-root-MuiAppBar-root  {
+    position: fixed;
+    box-sizing: border-box;
+    justify-content: space-between;
+    background-color: rgb(116, 55, 136);
+
+}
+
+ul {
+ 
+    list-style: none;
+    display: flex;
+}
+
+li {
+    padding: 0px 20px;
+}
