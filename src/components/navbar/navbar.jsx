@@ -3,7 +3,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 //css
-import './navbar.css'
+import './NavBar.css'
 import Logo from "../../assets/logo.png"
 
 export default function ButtonAppBar() {
