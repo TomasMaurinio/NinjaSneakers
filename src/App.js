@@ -1,14 +1,12 @@
 import './App.css';
-import ButtonAppBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import AppRouter from './components/AppRouter/AppRouter';
+import Footer from './components/footer/Footer';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <ButtonAppBar/>
-      <ItemListContainer/>
+      <AppRouter />
+      <Footer />
     </div>
   );
 }
-
-export default App;

@@ -1,0 +1,8 @@
+.HomeContainer{
+    padding: 100px;
+    background-image: url(../../../public/assets/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 72vh;
+
+}

@@ -1,0 +1,61 @@
+
+.footer{
+    color: rgb(238, 238, 238);
+    background-color: rgb(21, 21, 21);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+  }
+  .footer-text{
+    background-color: rgb(116, 55, 136);;
+    font-size: 25px;
+  }
+  div.footer-links {
+    padding-bottom: 2px;
+    padding-top: 40px;
+   display: inline-block;
+  }
+ 
+  div.footer-links a {
+    text-decoration: none;
+    color: rgb(51, 45, 40);
+    text-align: center;
+    padding: 15px;
+    background-color: brown;
+    border-radius: 15px;
+   }
+   div.footer-links a.whatsapp{
+    color: rgb(241, 241, 241);
+    background-color: #358a54;
+    transition: all 0.2s;
+  }
+  div.footer-links a.instagram{
+    color: rgb(241, 241, 241);
+    background-color: #b94141;
+    transition: all 0.2s;
+  }
+  div.footer-links a.facebook{
+    color: rgb(241, 241, 241);
+    background-color: #3B5998;
+    transition: all 0.2s;
+  }
+  div.footer-links a.whatsapp:hover {
+    color: #358a54;
+    background-color: rgb(211, 207, 207);
+  }
+  div.footer-links a.instagram:hover {
+    color: #b94141;
+    background-color: rgb(211, 207, 207);
+  }
+  div.footer-links a.facebook:hover {
+    color: #3B5998;
+    background-color: rgb(211, 207, 207);
+  }
+
+  div.footer-info {
+    color: rgb(146, 146, 145);
+    padding-top: 35px;
+   font-size: 20px;
+}
