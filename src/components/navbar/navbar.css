@@ -10,6 +10,7 @@ header.css-hip9hq-MuiPaper-root-MuiAppBar-root  {
 header.css-hip9hq-MuiPaper-root-MuiAppBar-root img{
     width: 70px;
     padding: 4px;
+    padding-top: 6px;
 }
 
 ul {
@@ -18,7 +19,7 @@ ul {
 }
 
 li {
-    padding-top: 1px;
+    padding-top: 0px;
     padding-left: 24px;
 }
 
@@ -52,4 +53,10 @@ button.boton-dropdown{
 
     display: block;
     background-color: rgb(93, 41, 111);
+}
+
+.cart-icon{
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
 }

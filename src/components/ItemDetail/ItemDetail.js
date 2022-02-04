@@ -10,15 +10,12 @@ export default function ItemDetail({ data }) {
 
                 <div className='ItemContenedor'>
                     <div className='left'>
-                        <h3 className='productName'> {data.name}</h3>
-                        <br/>
-                        <img className='imagenDeProducto' src= {data.img} alt={data.name} width={250} height={250}></img>
+                        <img className='imagenDeProducto' src= {data.img} alt={data.name} width={250} height={250} />
                     </div>
-                        <br/><br/>
                     <div className='right'>
-                        <b>Precio : ${data.price}</b>
-                        <br/>
-                        <p>Stock: {data.stock}</p>
+                        <h3 className='productName'> {data.name}</h3>
+                        <b className='price'>Precio : ${data.price}</b>
+                        <p className='stock'>Stock: {data.stock}</p>
                         <ItemCount stock={data.stock} />
                     </div>
                 </div>

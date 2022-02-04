@@ -1,12 +1,10 @@
 import './App.css';
-import AppRouter from './components/AppRouter/AppRouter';
-import Footer from './components/footer/Footer';
+import AppRouter from './AppRouter/AppRouter';
 
 export default function App() {
   return (
     <div className="App">
       <AppRouter />
-      <Footer />
     </div>
   );
 }

@@ -12,7 +12,7 @@ const ItemListContainer = () => {
     const dataProducts = [
         {
             id: 1,
-            name: 'zapatillas1',
+            name: 'Adidas Supernova',
             price: 15500,
             img: './assets/zapatillas1.jpg',
             stock: 4,
@@ -21,7 +21,7 @@ const ItemListContainer = () => {
 
         {
             id: 2,
-            name: 'zapatillas2',
+            name: 'Adidas Forum Mid',
             price: 19000,
             img: './assets/zapatillas2.jpg',
             stock: 3,
@@ -30,7 +30,7 @@ const ItemListContainer = () => {
 
         {
             id: 3,
-            name: 'zapatillas3',
+            name: 'Adidas Postmove',
             price: 11000,
             img: './assets/zapatillas3.jpg',
             stock: 2,
@@ -39,7 +39,7 @@ const ItemListContainer = () => {
 
         {
             id: 4,
-            name: 'zapatillas4',
+            name: 'Adidas ZX 2K Boost 2.0',
             price: 21000,
             img: './assets/zapatillas4.jpg',
             stock: 5,
@@ -48,7 +48,7 @@ const ItemListContainer = () => {
 
         {
             id: 5,
-            name: 'ojotas1',
+            name: 'Adidas Adilette lite',
             price: 3500,
             img: './assets/ojotas1.jpg',
             stock: 2,
@@ -57,7 +57,7 @@ const ItemListContainer = () => {
 
         {
             id: 6,
-            name: 'ojotas2',
+            name: 'Adidas Adilette Comfort',
             price: 4000,
             img: './assets/ojotas2.jpg',
             stock: 5,
@@ -88,26 +88,31 @@ const ItemListContainer = () => {
     useEffect(() => {
         setTimeout(() => {
             setLoaded(false);
-        }, 2000)
+        }, 1400)
     }, []);
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     return (
         <>
             {loaded ?
-            <div className='loading-container'>
-                <div class="loadingio-spinner-bean-eater-ej6q7dlni"><div class="ldio-kpr815xf35">
-                <div><div></div><div></div><div></div></div><div><div></div><div></div><div></div></div></div></div>
-            </div> :
-            <div>
-                <h2 className='subtitulo'>Nuestros productos</h2>
-                <div className='item-list-container'>
-                {products.map(product => {
-                    return (
-                        <Item data={product} />
-                    )
-                })}
-            </div>
-            </div>}
+                <div className='loading-container'>
+                    <div class="loadingio-spinner-bean-eater-ej6q7dlni"><div class="ldio-kpr815xf35">
+                    <div><div></div><div></div><div></div></div><div><div></div><div></div><div></div></div></div></div>
+                </div> :
+                <div>
+                    <h2 className='subtitulo'>Nuestros productos</h2>
+                    <div className='item-list-container'>
+                    {products.map(product => {
+                        return (
+                            <Item data={product} />
+                        )
+                    })}
+                </div>
+                </div>
+            }
 
         </>
     )

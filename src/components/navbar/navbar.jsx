@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import './NavBar.css'
 import Logo from "../../assets/logo.png"
 import { Link } from 'react-router-dom'
+import { withEmotionCache } from '@emotion/react';
 
 export default function ButtonAppBar() {
 
@@ -24,7 +25,9 @@ export default function ButtonAppBar() {
     <AppBar position="static">
       <Toolbar>
         <div className="Logo">
+          <Link to="/">
           <img src={Logo} alt="" />
+          </Link>
         </div>
         <ul className="Lista-NavBar">
           <li><Link to="/"><Button color="inherit">Inicio</Button></Link></li>
