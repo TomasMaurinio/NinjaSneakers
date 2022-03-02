@@ -4,8 +4,8 @@ import "./HomePage.css";
 export default function HomePage() {
   return (
     <div className='HomeContainer'>
-      <div>
-        <h1>Bienvenido!</h1>
+      <div className='div-bar'>
+        <h1 className='titulo'>¡Bienvenido a Ninja Sneakers! </h1>
       </div>
     </div>
   )

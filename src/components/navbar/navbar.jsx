@@ -1,25 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import './NavBar.css'
 import Logo from "../../assets/logo.png"
 import { Link } from 'react-router-dom'
-import { withEmotionCache } from '@emotion/react';
+//externo fontawesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {  faCartPlus } from '@fortawesome/free-solid-svg-icons'
+import CartWidget from '../CartWidget/CartWidget';
 
 export default function ButtonAppBar() {
-
-  const [categories] = useState([
-    {
-      name: 'zapatillas',
-      id: 1,
-      category: 1,
-    },
-    {
-      name: 'ojotas',
-      id: 2,
-      category: 2,
-    },])
 
   return (
     <AppBar position="static">
@@ -32,15 +23,20 @@ export default function ButtonAppBar() {
         <ul className="Lista-NavBar">
           <li><Link to="/"><Button color="inherit">Inicio</Button></Link></li>
           <div className='dropdown'>
-            <li> <Link to='/products' style={{ textDecoration: 'none', color: 'white' }}> <Button color="inherit">Productos</Button> </Link>
-              <div className='dropdown-content'>   {categories.map((category) => {
-                return <Link to={`/category/${category.id}`} style={{ textDecoration: 'none', color: 'white' }} > <Button className='boton-dropdown' color="inherit">
-                  {category.name}</Button></Link>
-              })} </div>
+            <li> <Link to="/products"> <Button style={{ textDecoration: 'none', color: 'white' }} color="inherit">Productos</Button> </Link>
+              <div className='dropdown-content'>
+                <Link to="/products/zapatillas">Zapatillas</Link>
+                <Link to="/products/ojotas">Ojotas</Link>
+              </div>
             </li>
           </div>
           <li><Link to="/aboutus"> <Button color="inherit">Sobre nosotros</Button></Link></li>
           <li><Link to="/contact"> <Button color="inherit">Contacto</Button></Link></li>
+          <div className='cart-icon'>
+            <li>
+              <CartWidget />
+            </li>
+          </div>
         </ul>
       </Toolbar>
     </AppBar>

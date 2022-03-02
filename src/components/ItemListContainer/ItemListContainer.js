@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import Item from '../Item/Item';
 import './ItemListContainer.css';
 import { useParams } from 'react-router-dom';
+//Firebase
+import db from '../../firebase';
+import { collection, getDocs } from 'firebase/firestore';
 
 const ItemListContainer = () => {
 
@@ -9,77 +12,28 @@ const ItemListContainer = () => {
     const [loaded, setLoaded] = useState(true)
     const { category } = useParams()
 
-    const dataProducts = [
-        {
-            id: 1,
-            name: 'Adidas Supernova',
-            price: 15500,
-            img: './assets/zapatillas1.jpg',
-            stock: 4,
-            category: 1,
-        },
-
-        {
-            id: 2,
-            name: 'Adidas Forum Mid',
-            price: 19000,
-            img: './assets/zapatillas2.jpg',
-            stock: 3,
-            category: 1,
-        },
-
-        {
-            id: 3,
-            name: 'Adidas Postmove',
-            price: 11000,
-            img: './assets/zapatillas3.jpg',
-            stock: 2,
-            category: 1,
-        },
-
-        {
-            id: 4,
-            name: 'Adidas ZX 2K Boost 2.0',
-            price: 21000,
-            img: './assets/zapatillas4.jpg',
-            stock: 5,
-            category: 1,
-        },
-
-        {
-            id: 5,
-            name: 'Adidas Adilette lite',
-            price: 3500,
-            img: './assets/ojotas1.jpg',
-            stock: 2,
-            category: 2,
-        },
-
-        {
-            id: 6,
-            name: 'Adidas Adilette Comfort',
-            price: 4000,
-            img: './assets/ojotas2.jpg',
-            stock: 5,
-            category: 2,
-        },
-    ]
-
-    const getProducts = new Promise((resolve, reject) => {
-        resolve(dataProducts)
-    })
+    async function productos()  {
+        const productsCol = collection(db, 'products');
+        const productsSnapshot = await getDocs(productsCol);
+        const productsList = productsSnapshot.docs.map(doc => {
+            let producto = doc.data()
+            producto.id = doc.id
+            return producto
+        });
+        return productsList;
+    }
 
     useEffect(() => {
-        getProducts.then(data => {
+        productos(db).then(data => {
             if (!category) {
                 setProducts(data)
             }
-            if (category === 1) {
-                const productosFiltrados = data.filter(unProducto => unProducto.category === 1)
+            if (category === 'zapatillas') {
+                const productosFiltrados = data.filter(unProducto => unProducto.category === 'zapatillas')
                 setProducts(productosFiltrados)
             }
-            if (category === 2) {
-                const productosFiltrados = data.filter(unProducto => unProducto.category === 2)
+            if (category === 'ojotas') {
+                const productosFiltrados = data.filter(unProducto => unProducto.category === 'ojotas')
                 setProducts(productosFiltrados)
             }
         })

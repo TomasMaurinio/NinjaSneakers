@@ -9,8 +9,9 @@
     text-align: center;
   }
   .footer-text{
-    background-color: rgb(116, 55, 136);;
+    background-color: rgb(116, 55, 136);
     font-size: 25px;
+    padding-bottom: 4px;
   }
   div.footer-links {
     padding-bottom: 2px;

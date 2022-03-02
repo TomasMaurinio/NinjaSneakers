@@ -1,0 +1,26 @@
+.imgCart {
+    width: 150px;
+    padding: 10px;
+}
+
+.final-cart {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.header-cart {
+    padding-bottom: 50px;
+}
+
+.MuiButton-textPrimary{
+    color: white !important;
+}
+
+.MuiButton-textPrimary :hover{
+    background-color: rgba(116, 55, 136, 0.165) !important;
+}
+
+.MuiButton-outlinedPrimary{
+    color: rgb(83, 37, 85) !important;
+    border: 1px solid rgb(83, 37, 85, 0.5) !important;
+}

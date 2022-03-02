@@ -1,16 +1,12 @@
 .btn-comprar{
+    background-color: rgb(146, 146, 146);
+    color: white;
     border-radius: 30px;
     font-weight: bold;
     height: 50px;
     width: 200px;
-    margin-bottom: 20px;
-    margin-top: 14px;
 }
 
-.btn-ver{
-    border-radius: 30px;
-    font-weight: bold;
-    height: 44px;
-    width: 150px;
-    margin-bottom: 30px;
+.btn-comprar:hover {
+    cursor: pointer;
 }

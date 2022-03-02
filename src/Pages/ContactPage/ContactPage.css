@@ -1,4 +1,65 @@
-.ContactContainer{
-    padding: 100px;
-    height: 50.4vh;
+#contenedorTodo{
+    padding-top: 100px;
+}
+
+#contactContainer {
+    width: 80%;
+    margin: 0 auto;
+    padding-block: 30px;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical
+}
+
+[type=submit] {
+    background-color: rgb(224, 175, 111);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+input[type=submit]:hover {
+    background-color: #c9733d;
+}
+
+ .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.sent-content{
+    max-width: 325px;
+    font-size: 60px;
+    background: rgb(238, 182, 108);
+    padding: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    transition: all 500ms ease;
+}
+
+.sent-container.active .sent-content{
+    transform: translate(-50%,-50%) scale(1);
+    transition: all 500ms ease;
+}
+
+.sent-container button{
+    position: absolute;
+    top: 10px;
+    right: 20px;
 }

@@ -1,0 +1,51 @@
+.modal {
+    margin: 0 auto;
+}
+
+.money {
+    margin: 0 auto;
+}
+
+.form-container > div {
+    margin-bottom: 15px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.form-container button {
+    background: rgba(83, 37, 85, 0.707);
+    border: 1px solid black !important;
+    color: white;
+}
+
+.form-container button:hover {
+    color: black !important;
+}
+
+.iframe {
+    font-size: 17px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+
+@media only screen and (max-width: 780px) {
+    .form-container > div {
+        margin-bottom: 15px;
+    }
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+    }
+
+    .iframe {
+        font-size: 10px;
+        width: 300px;
+    }
+}

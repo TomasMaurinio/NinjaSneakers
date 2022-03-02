@@ -5,3 +5,14 @@
     background-size: cover;
     height: 72vh;
 }
+
+.titulo{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+
+.div-bar{
+
+    background-color: rgba(0, 0, 0, 0.631);
+    border-radius: 25px;
+}
