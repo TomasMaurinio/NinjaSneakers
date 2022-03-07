@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonAppBar from "../components/NavBar/NavBar"
+import ButtonAppBar from "../components/NavBar/NavBar";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AboutUsPage from '../Pages/AboutUsPage/AboutUsPage';
 import ContactPage from '../Pages/ContactPage/ContactPage';

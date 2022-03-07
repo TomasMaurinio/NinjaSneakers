@@ -6,8 +6,6 @@ import './NavBar.css'
 import Logo from "../../assets/logo.png"
 import { Link } from 'react-router-dom'
 //externo fontawesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {  faCartPlus } from '@fortawesome/free-solid-svg-icons'
 import CartWidget from '../CartWidget/CartWidget';
 
 export default function ButtonAppBar() {

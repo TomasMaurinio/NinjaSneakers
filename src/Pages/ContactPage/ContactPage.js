@@ -1,5 +1,5 @@
 import './ContactPage.css'
-import React, { useContext, useState } from 'react';
+import React, {useState } from 'react';
 
 export default function ContactPage() {
     const [comment, setComment] = useState(false)
